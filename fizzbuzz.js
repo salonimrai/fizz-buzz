@@ -1,6 +1,6 @@
-function playFizzBuzz(){
+function playFizzBuzz(maxFizzBuzz){
 	var para;
-for (var i = 1; i <=100; i++) {
+for (var i = 1; i <=maxFizzBuzz; i++) {
 	if((i%15)==0) {
 		para = $("<p></p>").text("Fizz Buzz");
 	}
@@ -18,5 +18,8 @@ for (var i = 1; i <=100; i++) {
 };
 
 $(document).ready(function(){
-	playFizzBuzz();
+	playFizzBuzz(10);
+	var maxNum = parseInt(prompt("Please enter a nunmber"));
+	$('body').append("<p>Starting new game..."+maxNum+"...</p>");
+	playFizzBuzz(maxNum);
 });
